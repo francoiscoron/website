@@ -1,0 +1,31 @@
+.l-main__intro {
+    margin: 200px auto;
+    text-align: center;
+    width: 50%;
+
+    @media screen and (max-width: $medium-width) {
+        margin: 100px auto;
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+.intro__title {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 3.25em;
+    margin: 0;
+
+    @media screen and (max-width: $medium-width) {
+        font-size: 3rem;
+    }
+}
+
+.intro__subtitle {
+    font-weight: 300;
+    font-size: 2.25em;
+    margin: 0;
+    @media screen and (max-width: $medium-width) {
+        font-size: 1.6rem;
+    }
+}

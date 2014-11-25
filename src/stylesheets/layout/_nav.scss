@@ -1,0 +1,24 @@
+// Main Nav
+.main-nav {
+    float: left;
+    margin-top: 20px;
+}
+.main-nav__links {
+    text-transform: uppercase;
+    margin-right: 2rem;
+}
+
+// Social links
+.social-nav {
+    float: right;
+    margin-top: 20px;
+}
+.social-nav__links {
+    margin-left: 20px;
+}
+
+.main-nav, .social-nav {
+    @media screen and (max-width: $medium-width) {
+        display: none;
+    }
+}

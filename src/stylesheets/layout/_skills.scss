@@ -1,0 +1,28 @@
+.l-main__skills {
+    @include clearfix();
+    background: #edeceb;
+    padding: 100px 0;
+    @media screen and (max-width: $medium-width) {
+        padding: 50px 0;
+    }
+}
+.skills__bloc {
+    width: 33.33%;
+    float: left;
+    text-align: center;
+    padding: 0 3rem;
+
+    @media screen and (max-width: $medium-width) {
+        width: 100%;
+        float: none;
+        img {
+            margin: 30px auto;
+
+        }
+    }
+}
+
+.skills__title {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}

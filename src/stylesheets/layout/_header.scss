@@ -1,0 +1,26 @@
+.l-header {
+    border-top: 2px solid $brand-color;
+    padding: 10px 50px;
+    position:fixed;
+    top: 0;left: 0; right: 0;
+    background: #FFF;
+    font-size: 1.125em;
+    z-index: 20;
+    opacity: 1;
+    @include transition(all 600ms ease 0s);
+
+    &.header-up {
+        top: -82px;
+    }
+
+    @media screen and (max-width: $medium-width) {
+        padding: 10px;
+    }
+}
+
+.header__logo {
+    float: left;
+    width: 60px; height: 60px;
+    display: inline-block;
+    margin-right: 2.5rem;
+}

@@ -1,0 +1,44 @@
+.l-footer {
+    text-align: center;
+    font-size: 0.875rem;
+    padding: 1rem 0;
+}
+.footer-bloc {
+    @include clearfix();
+    margin-bottom: 10px;
+}
+.footer-bloc__info, .footer-bloc__contact {
+    float: left;
+    width: 20%;
+    text-align: left;
+    margin-right: 2rem;
+
+    h4 {
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    p { margin: 0; }
+
+    @media screen and (max-width: $medium-width) {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.footer-bloc__social {
+    float: right;
+    margin-top: 2.5rem;
+    font-size: 1rem;
+
+    @media screen and (max-width: $medium-width) {
+        float: none;
+        width: 100%;
+    }
+}
+
+.footer-bloc__social__links {
+    margin-left: 1rem;
+    color: #CCC;
+}
