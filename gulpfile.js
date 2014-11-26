@@ -9,11 +9,13 @@ var gulp    = require('gulp'),
     jade    = require('gulp-jade'),
     uglify  = require('gulp-uglify'),
     concat  = require('gulp-concat'),
-    connect = require('gulp-connect');
+    sftp  = require('gulp-sftp'),
+    connect = require('gulp-connect'),
+    sitemap = require('gulp-sitemap');
 
 // Clean
 gulp.task('clean', function() {
-  return gulp.src('dist/', { read: false })
+  return gulp.src('dist', { read: false })
     .pipe(rimraf());
 });
 
@@ -23,7 +25,8 @@ gulp.task('style', function(){
     return gulp.src('src/stylesheets/app.scss')
         .pipe(plumber())
         .pipe(scss({
-            compass: true
+            compass: true,
+            style: 'compressed'
         }))
         .pipe(gulp.dest('dist/css/'))
         .pipe(connect.reload());
@@ -60,7 +63,7 @@ gulp.task('font', function() {
 
 // Scripts
 gulp.task('script', function(){
-    return gulp.src(['src/scripts/libs/jquery.js', 'src/scripts/app.js'])
+    return gulp.src(['src/scripts/libs/jquery.js', 'src/scripts/libs/jquery.animsition.js', 'src/scripts/app.js'])
         .pipe(plumber())
         .pipe(uglify())
         .pipe(concat('app.min.js'))
@@ -76,7 +79,7 @@ gulp.task('connect', function() {
 });
 
 // Build
-gulp.task('build', ['clean','style','images', 'font', 'jade', 'script']);
+gulp.task('build', ['style','images', 'font', 'jade', 'script']);
 
 // Watch
 gulp.task('watch', ['build','connect'], function(){
@@ -94,3 +97,21 @@ gulp.task('watch', ['build','connect'], function(){
     gulp.watch('src/stylesheets/**/*.scss', ['style'])
     gulp.watch('src/images/**/*', ['images'])
 })
+
+gulp.task('sitemap', function () {
+    return gulp.src('dist/**/*.html')
+        .pipe(sitemap({
+            siteUrl: 'http://www.francoiscoron.com'
+        }))
+        .pipe(gulp.dest('dist/'));
+});
+
+// Deploy
+gulp.task('deploy', ['sitemap'], function () {
+    return gulp.src('dist/**/*')
+        .pipe(plumber())
+        .pipe(sftp({
+            host: 'francoiscoron.com',
+            auth: 'keyMain'
+        }))
+});

@@ -3,8 +3,27 @@
     margin: 150px auto;
     text-align: center;
 
-    h1 {
-        font-weight: lighter;
-        font-size: 3.2rem;
+    @media screen and (max-width: $medium-width) {
+        text-align: left;
+    }
+}
+
+.contact__title {
+    font-weight: lighter;
+    font-size: 3.2rem;
+    color: lighten($heading-color, 10%);
+
+    @media screen and (max-width: $medium-width) {
+        font-size: 2rem;
+    }
+
+    a {
+        display: inline-block;
+        color: $brand-color;
+        border-bottom: 1px dotted $brand-color;
+        &:hover {
+            color: $heading-color;
+            border-bottom: 1px dotted $heading-color;
+        }
     }
 }

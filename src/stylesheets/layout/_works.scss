@@ -1,3 +1,5 @@
+// WORK List
+
 .l-main__works {
     @include clearfix();
 }
@@ -27,13 +29,18 @@
        @include works-img('/images/jean-seu.jpg');
         height: 400px;
     }
-    &.maatch {
-        @include works-img('/images/maatch.jpg');
+    &.francois-coron {
+        @include works-img('/images/francois-coron.jpg');
         height: 400px;
     }
-    &.treeends {
-        @include works-img('/images/treeends.jpg');
+    &.pulp-design {
+        @include works-img('/images/pulp-design.jpg');
         height: 800px;
+
+        @media screen and (max-width: $medium-width) {
+            height: 400px;
+        }
+
     }
     &:hover {
         .works__grid--caption { opacity: 1; }
@@ -71,3 +78,61 @@
     text-transform: uppercase;
     border: 1px solid $base-color;
 }
+
+// SINGLE WORK
+.l-single-work {
+    @include clearfix();
+}
+.single-work__wrapper {
+    background: $bg-bloc;
+    padding: 2rem;
+}
+
+.single-work__desc { @include clearfix(); }
+
+.single-work__title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0;
+
+    @media screen and (max-width: $medium-width) {
+        font-size: 1.8rem;
+    }
+}
+
+.single-work__summary--left, .single-work__summary--right {
+    width: 50%;
+    float: left;
+    text-align: left;
+
+    h2 {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    @media screen and (max-width: $medium-width) {
+        float: none;
+        width: 100%;
+        padding: 10px;
+    }
+
+}
+.single-work__summary--left { padding-right: 1rem;}
+.single-work__summary--right { padding-left: 1rem; }
+
+.single-work__link {
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+
+    @media screen and (max-width: $medium-width) {
+        display: block;
+        text-align: center;
+    }
+}
+

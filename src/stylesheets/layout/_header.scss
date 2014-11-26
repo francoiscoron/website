@@ -12,10 +12,13 @@
     &.header-up {
         top: -82px;
     }
-
     @media screen and (max-width: $medium-width) {
         padding: 10px;
     }
+}
+
+.sm-show .l-header.header-up {
+        top: 0 !important;
 }
 
 .header__logo {

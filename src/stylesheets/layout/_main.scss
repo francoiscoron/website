@@ -29,3 +29,29 @@
         font-size: 1.6rem;
     }
 }
+
+.more-works {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.more-works--button {
+    padding: .5rem 2rem;
+    border: 1px solid $base-color;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.2rem;
+
+    i {
+        vertical-align: middle;
+        font-size: 1.4rem;
+        margin-right: .5rem;
+        display: inline-block;
+        margin-top: -3px;
+    }
+
+    &:hover {
+        color: #1769ff;
+        border-color: #1769ff;
+    }
+}

@@ -1,4 +1,10 @@
 (function($){
+// Responsive Nav
+$('#btn-nav').click(function(){
+    $('body').toggleClass('sm-show')
+})
+
+
 // Hide Header on on scroll down
 var didScroll;
 var lastScrollTop = 0;
@@ -37,4 +43,24 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
+
+// Animsition
+    $(".animsition").animsition({
+
+        inClass               :   'fade-in-up-sm',
+        outClass              :   'fade-out-up-sm',
+        inDuration            :    1500,
+        outDuration           :    800,
+        loading               :    true,
+        loadingParentElement  :   'body', //animsition wrapper element
+        loadingClass          :   'animsition-loading',
+        unSupportCss          : [ 'animation-duration',
+                                  '-webkit-animation-duration',
+                                  '-o-animation-duration'
+                                ],
+        overlay               :   false,
+        overlayClass          :   'animsition-overlay-slide',
+        overlayParentElement  :   'body'
+    });
+
 })(jQuery);

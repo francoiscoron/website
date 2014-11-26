@@ -3,9 +3,64 @@
     float: left;
     margin-top: 20px;
 }
+
 .main-nav__links {
     text-transform: uppercase;
     margin-right: 2rem;
+}
+
+// Responsive NAv
+.btn-burger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    z-index: 24;
+
+    @media screen and (max-width: $medium-width) {
+        display: block;
+    }
+}
+
+.btn-burger__bar {
+    height: 3px;
+    width: 25px;
+    display: block;
+    margin-bottom: 4px;
+    background:#333;
+}
+
+.mobile-nav {
+    position: fixed;
+    background: #FFF;
+    left: 0; right: 0;
+    z-index: 24;
+    bottom: 0; top: 82px;
+    text-align: center;
+    @include transform(translateX(-100%));
+
+}
+.mobile-nav__container {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    opacity: 0;
+    @include transition(all 600ms ease 0s);
+    @include transform(translate(-50%, -45%));
+}
+.mobile-nav__links {
+    display: block;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.sm-show .mobile-nav {
+    @include transform(translateX(0));
+
+    & > .mobile-nav__container {
+        opacity: 1;
+    }
 }
 
 // Social links

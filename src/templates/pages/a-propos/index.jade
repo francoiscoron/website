@@ -1,3 +1,8 @@
+block title
+      title Francois Coron | A propos
+    block description
+      meta(name="description" content="Designer Web & Développeur web front-end basé à Lyon, Rhône-Alpes. Je créer des sites web dynamique et optimisé. N'hésitez pas à me contacter pour vos projets web")
+
 extends ../../layouts/main
 block main
 
@@ -5,19 +10,19 @@ block main
     .about__cover
       img(src="/images/about-cover.jpg", alt="Francois Coron")
 
-    .about__summary
+    .about__summary(itemscope itemtype="http://data-vocabulary.org/Person")
       .about__wrapper
         h1.summary__title A propos
-        p.summary__text Bienvenu à bord ! Je suis Francois. Je suis web designer et développeur front-end basé à Lyon. Passionné par le web, je me suis spécialisé dans le développement front-end et l'intégration web. J'apporte une grande importance au parcours utilisateur et au design émotionel.
+        p.summary__text Bienvenue à bord ! Je suis <span itemprop="name">Francois Coron</span>. Je suis <span itemprop="title">web designer &amp; Développeur web front-end</span> basé à <span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"><span itemprop="locality">Lyon</span>. Passionné par le web, je me suis spécialisé dans le développement front-end et l'intégration web. J'apporte une grande importance au parcours utilisateur et au design émotionel dans chacun de <a href="http://francoiscoron.com" itemprop="url" title="Francois Coron | Web designer Développeur front-end">mes projets</a>.
 
     .about__workflow
       .about__wrapper
-        h1.workflow__title Workflow
-        p.workflow__text Bienvenu à bord ! Je suis Francois. Je suis web designer et développeur front-end basé à Lyon. Passionné par le web, je me suis spécialisé dans le développement front-end et l'intégration web. J'apporte une grande importance au parcours utilisateur et au design émotionel.
+        h2.workflow__title Workflow
+        p.workflow__text Je suis tout aussi à l'aise avec les logiciels de création graphiques qu'avec ceux de développement web. Toujours à l'affut des dernières technologies web, j'aime expérimenter, apprendre et partager de nouvelles choses. N'hésiter pas à me <a href="/contact/" title="Me contacter">contacter</a>
 
     .about__cv
       .bloc__profil
       .bloc__download
-        h2 Curiculum Vitae
-        p N'hésitez pas à jetter un oeil un à mon cv
-        a.button(href="#") Voir mon cv
+        h2.download__title En savoir plus
+        p.download__text Pour en savoir plus n'hésitez pas à jetter un oeil un à mon cv.
+        a.download__button(href="/images/cv-francoiscoron.pdf" title="Télécharger mon cv") Voir mon cv

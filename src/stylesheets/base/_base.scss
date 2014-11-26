@@ -4,6 +4,12 @@ body {
     font-size: $base-font-size;
     color: $base-color;
     margin-top: 90px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    &.sm-show {
+        overflow-y: hidden;
+    }
+
 }
 
 a {
@@ -22,6 +28,7 @@ img {
 
 .l-container {
     margin: 0 50px;
+
     @media screen and (max-width: $medium-width) {
         padding: 0 10px;
         margin: 0 auto;
