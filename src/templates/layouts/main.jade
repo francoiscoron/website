@@ -3,16 +3,23 @@ html(lang="fr")
   head
     meta(charset="utf-8")
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+
     block title
-      title Francois Coron | Designer web & Développeur web front-end
+      title Francois Coron | Designer web &amp; Développeur web front-end
     block description
       meta(name="description" content="Je suis Francois Coron Designer Web & Développeur web front-end basé à Lyon. Je créer des sites web en html 5 et css 3, optimisé pour le référencement naturel")
+
     link(rel="stylesheet",type="text/css", href="/css/app.css")
 
-  body
-    include ../partials/header
-    .l-container.animsition
-      block main
+    include ../partials/meta
 
-      include ../partials/footer
+
+  body
+    //[if lt IE 8] <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p> [endif]
+    include ../partials/header
+    .wrapper
+      .l-container.animsition
+        block main
+
+        include ../partials/footer

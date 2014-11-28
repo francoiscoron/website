@@ -28,20 +28,24 @@
     &.jeanseu {
        @include works-img('/images/jean-seu.jpg');
         height: 400px;
+        background-position: center center;
     }
     &.francois-coron {
-        @include works-img('/images/francois-coron.jpg');
+        @include works-img('/images/pro-francois-coron-1.jpg');
         height: 400px;
+        background-position: center center;
     }
     &.pulp-design {
         @include works-img('/images/pulp-design.jpg');
         height: 800px;
+        background-position: top left;
 
         @media screen and (max-width: $medium-width) {
             height: 400px;
         }
 
     }
+
     &:hover {
         .works__grid--caption { opacity: 1; }
         .works__grid--button { opacity: 1; }
@@ -74,30 +78,49 @@
 .caption__button {
     display: inline-block;
     color: $base-color;
-    padding: 10px 20px;
+    padding: .5rem 2rem;
     text-transform: uppercase;
     border: 1px solid $base-color;
+
+    &:hover {
+        color: $brand-color;
+        border-color: $brand-color;
+    }
 }
 
 // SINGLE WORK
 .l-single-work {
     @include clearfix();
+    a {
+        font-weight: 600;
+    }
 }
 .single-work__wrapper {
     background: $bg-bloc;
     padding: 2rem;
 }
-
+.work__image--left, .work__image--right {
+    float: left;
+    width: 50%;
+}
 .single-work__desc { @include clearfix(); }
 
 .single-work__title {
     font-size: 2.5rem;
     text-transform: uppercase;
-    margin: 0;
+    margin: 0 0 1rem;
 
     @media screen and (max-width: $medium-width) {
         font-size: 1.8rem;
     }
+}
+.single-work__subtitle {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    display: inline-block;
+    margin-left: .6rem;
+    font-style: italic;
+    color: lighten($heading-color, 20%);
 }
 
 .single-work__summary--left, .single-work__summary--right {
@@ -128,7 +151,8 @@
     text-transform: uppercase;
     display: inline-block;
     margin-top: 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
 
     @media screen and (max-width: $medium-width) {
         display: block;
@@ -136,3 +160,22 @@
     }
 }
 
+
+.pagination {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.pagination--prev, .pagination--next {
+    text-transform: uppercase;
+}
+
+.pagination--next {
+    &:before {
+        content: " | ";
+        margin: 0 1rem;
+    }
+    &:hover:before {
+        color: $base-color;
+    }
+}

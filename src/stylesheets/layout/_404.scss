@@ -1,0 +1,27 @@
+.l-404 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.l-404__title {
+    font-size: 12rem;
+    margin: 0;
+    color: #CCC;
+}
+
+.l-404__summary {
+    font-size: 2rem;
+    font-weight: lighter;
+    margin: 0;
+    text-align: center;
+}
+.l-404__button {
+    display: inline-block;
+    margin: 2.5rem 0;
+    text-transform: uppercase;
+    padding: .5rem 2rem;
+    border: 1px solid $base-color;
+    &:hover {
+        border-color: $brand-color;
+    }
+}

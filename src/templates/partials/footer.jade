@@ -1,14 +1,15 @@
 footer.l-footer
 
-  .footer-bloc
+  .footer-bloc(itemscope itemtype="http://data-vocabulary.org/Person")
     .footer-bloc__info
-      h4 FRANCOIS CORON
-      p Graphique &  Web designer // Développeur Front End basé à Lyon
+      h4(itemprop="name") FRANCOIS CORON
+      p <span itemprop="title">Web designer &amp; Développeur Front End</span> basé à <span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"><span itemprop="locality">Lyon</span>, <span itemprop="region">Rhône-Alpes</span>.
+
 
     .footer-bloc__contact
       h4 CONTACT
-      a(href="mailto:hello@francoiscoron.com") hello[at]francoiscoron.com
-      p (+33) 7 81 12 52 26
+      a(href="mailto:hello@francoiscoron.com" title="Contactez moi" itemprop="email") hello[at]francoiscoron.com
+      p <span itemprop="telephone">(+33) 7 81 12 52 26</span>
     .footer-bloc__social
         a.footer-bloc__social__links(href="https://twitter.com/francoiscoron" title="Twitter" target="_blank")
           i.icon-twitter
@@ -19,7 +20,8 @@ footer.l-footer
         a.footer-bloc__social__links(href="https://www.behance.net/francoiscoron" title="Behance" target="_blank")
           i.icon-behance
   .footer__copy
-    small ©2014 Francois Coron - Tout droits réservés
+    small ©2014 <a href="http://francoiscoron.com" itemprop="url" title="Francois Coron | Web designer Développeur front-end">Francois Coron</a>. - Tous droits réservés
+      a(href="https://plus.google.com/b/106739827181073372439/+FrancoiscoronDesign" rel="publisher")
 
 
 script(src="/js/app.min.js" async)

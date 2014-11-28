@@ -70,16 +70,22 @@ gulp.task('script', function(){
         .pipe(gulp.dest('dist/js/'));
 });
 
+gulp.task('file-server', function(){
+    return gulp.src(['./robot.txt', './browserconfig.xml'])
+        .pipe(plumber())
+        .pipe(gulp.dest('dist/'));
+});
+
 // Connect
 gulp.task('connect', function() {
-  connect.server({
-    root: 'dist/',
-    livereload: true
-  });
+    connect.server({
+        root: 'dist/',
+        livereload: true
+    });
 });
 
 // Build
-gulp.task('build', ['style','images', 'font', 'jade', 'script']);
+gulp.task('build', ['file-server','style','images', 'font', 'jade', 'script']);
 
 // Watch
 gulp.task('watch', ['build','connect'], function(){
@@ -109,7 +115,6 @@ gulp.task('sitemap', function () {
 // Deploy
 gulp.task('deploy', ['sitemap'], function () {
     return gulp.src('dist/**/*')
-        .pipe(plumber())
         .pipe(sftp({
             host: 'francoiscoron.com',
             auth: 'keyMain'

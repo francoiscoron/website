@@ -10,6 +10,18 @@
 
 }
 
+.about__cover {
+    background-image: url(/images/about-cover.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include background-size(cover);
+    width: 100%;
+    height: 700px;
+
+    @media screen and (max-width: $medium-width) {
+        height: 300px;
+    }
+}
 .summary__title, .workflow__title {
     text-transform: uppercase;
     font-size: 3rem;
@@ -19,6 +31,15 @@
 .summary__text, .workflow__text{
     font-size: 1.5rem;
     line-height: 1.8;
+
+    a {
+        color: $heading-color;
+        border-bottom: 1px dotted $heading-color;
+        &:hover {
+            color: lighten($heading-color, 10%);
+            border-color:  lighten($heading-color, 10%);
+        }
+    }
 
     @media screen and (max-width: $medium-width) {
         font-size: 1rem;
@@ -42,6 +63,30 @@
         padding: 10px;
     }
 }
+.workflow__icns {
+    @include clearfix;
+}
+
+.workflow__icns--html, .workflow__icns--css, .workflow__icns--gulp, .workflow__icns--jquery, .workflow__icns--sass {
+    background-image: url(/images/icons/skills-logo.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: 2rem 1.5rem 0;
+    opacity: 0.3;
+    height: 68px;
+    @include transition();
+
+    @media screen and (max-width: $medium-width) {
+        margin: 10px;
+    }
+}
+
+.workflow__icns--html { background-position: -199px 0; width: 44px;}
+.workflow__icns--css { width: 44px;}
+.workflow__icns--gulp { background-position: -44px 0; width: 29px;}
+.workflow__icns--jquery { background-position: -73px 0; width: 47px;}
+.workflow__icns--sass { background-position: -119px 0; width: 80px;}
+
 .about__cv {
     @include clearfix();
     background:#282828;
@@ -70,7 +115,7 @@
     @media screen and (max-width: $medium-width) {
         float: none;
         width: 100%;
-        padding: 30px 10px;
+        padding: 50px 10px;
         text-align: center;
         height: auto;
     }

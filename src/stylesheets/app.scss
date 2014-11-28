@@ -1,14 +1,20 @@
+// Compass
 @import 'compass';
 
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700);
+
+// Tools
 @import 'tool/animsition';
 @import 'tool/settings';
 @import 'tool/mixins';
 @import 'tool/icons';
 
-
+// Base
 @import 'base/normalize';
 @import 'base/base';
 
+// Header
 @import 'layout/header';
 @import 'layout/nav';
 @import 'layout/main';
@@ -17,4 +23,5 @@
 @import 'layout/about';
 @import 'layout/contact';
 @import 'layout/footer';
+@import 'layout/404';
 
