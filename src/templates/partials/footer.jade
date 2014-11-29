@@ -1,15 +1,18 @@
-footer.l-footer
+footer.l-footer(itemscope itemtype="http://data-vocabulary.org/Person")
 
-  .footer-bloc(itemscope itemtype="http://data-vocabulary.org/Person")
+  .footer-bloc
     .footer-bloc__info
       h4(itemprop="name") FRANCOIS CORON
-      p <span itemprop="title">Web designer &amp; Développeur Front End</span> basé à <span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"><span itemprop="locality">Lyon</span>, <span itemprop="region">Rhône-Alpes</span>.
+      p
+        <span itemprop="title">Web designer &amp; Développeur Front End</span>
+        | basé à <span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"> <span itemprop="locality">Lyon</span><span itemprop="region"> Rhône-Alpes</span>.</span>
 
 
     .footer-bloc__contact
       h4 CONTACT
       a(href="mailto:hello@francoiscoron.com" title="Contactez moi" itemprop="email") hello[at]francoiscoron.com
-      p <span itemprop="telephone">(+33) 7 81 12 52 26</span>
+      p
+        span(itemprop="telephone") (+33) 7 81 12 52 26
     .footer-bloc__social
         a.footer-bloc__social__links(href="https://twitter.com/francoiscoron" title="Twitter" target="_blank")
           i.icon-twitter
@@ -20,7 +23,7 @@ footer.l-footer
         a.footer-bloc__social__links(href="https://www.behance.net/francoiscoron" title="Behance" target="_blank")
           i.icon-behance
   .footer__copy
-    small ©2014 <a href="http://francoiscoron.com" itemprop="url" title="Francois Coron | Web designer Développeur front-end">Francois Coron</a>. - Tous droits réservés
+    small ©2014 <a href="http://francoiscoron.com" itemprop="url" title="Francois Coron | Web designer Développeur front-end">Francois Coron</a> - Tous droits réservés
       a(href="https://plus.google.com/b/106739827181073372439/+FrancoiscoronDesign" rel="publisher")
 
 
