@@ -1,10 +1,4 @@
 (function($){
-// Responsive Nav
-$('#btn-nav').click(function(){
-    $('body').toggleClass('sm-show')
-})
-
-
 // Hide Header on on scroll down
 var didScroll;
 var lastScrollTop = 0;
@@ -43,6 +37,15 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
+
+// Responsive Nav
+$('#menu-icon').click(function(){
+    $('body').toggleClass('show');
+    $('.menu-icon--bar').toggleClass('show');
+    $('#nav').toggleClass('show');
+})
+
+
 
 // Animsition
     $(".animsition").animsition({
