@@ -1,0 +1,26 @@
+block title
+  title Francois Coron | Treeends
+block description
+  meta(name="description" content="Création d'un thème wordpress pour un portfolio")
+
+extends ../../../layouts/main
+block main
+  .l-single-work
+
+    img(src="/images/test.jpg", alt="Création site Jean Seu")
+
+    .single-work__wrapper
+      h1.single-work__title Treeends
+      .single-work__desc
+        .single-work__summary--left
+          h2 Le projet
+          p Création d'une interface pour mobile dans le style du site dribbble. Designer les divers états de l'application notamment les interactions tactiles pour "liker", partager ou ajouter des projets.
+
+        .single-work__summary--right
+          h2 La solution
+          p Définition d'une charte graphique, recherche typographique pour le logo et les textes. Les projets présentés son issu de dribbble. Maquette du projet sous le logiciel Photoshop.
+
+      a.single-work__link(href="http://jean-seu.com" title="Voir le site web de Jean Seu") http://jeanseu.com
+  .pagination
+    a.pagination--prev(href="/projets/francois-coron/") &larr; Projet précédent
+    a.pagination--next(href="/projets/jean-seu/") Projet suivant &rarr;
