@@ -33,14 +33,17 @@ img {
   background: lighten($brand-color, 10%); /* Gecko Browsers */
 }
 .wrapper {
-    @media screen and (max-width: 1182px) {
+    @include clearfix();
+    @media screen and (min-width: 1182px) {
         max-width: 1180px;
         margin: 0 auto;
     }
 }
 .l-container {
     margin: 0 50px;
-
+    @media screen and (min-width: 1182px) {
+        margin: 0 auto;
+    }
     @media screen and (max-width: $medium-width) {
         padding: 0 10px;
         margin: 0 auto;
